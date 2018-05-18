@@ -6,11 +6,11 @@
   nx.fileToBase64 = function (inFile) {
     const reader = new FileReader();
     reader.readAsDataURL(inFile);
-    reader.onload = function(inEvent) {
-      return new Promise(function(resolve){
+    return new Promise(function (resolve) {
+      reader.onload = function(inEvent) {
         resolve(inEvent.target.result);
-      });
-    };
+      };
+    });
   };
 
 
