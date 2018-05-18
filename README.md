@@ -8,5 +8,7 @@ npm install -S afeiship/next-file-to-base64 --registry=https://registry.npm.taob
 
 ## usage:
 ```js
-//DOCS here!
+nx.fileToBase64(inFile).then((base64)=>{
+  console.log(base64);
+});
 ```
