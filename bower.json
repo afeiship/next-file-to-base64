@@ -1,0 +1,26 @@
+{
+  "name": "next-file-to-base64",
+  "description": "File to base64 based on FileReader for next",
+  "main": "dist/next-file-to-base64.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-file-to-base64",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
