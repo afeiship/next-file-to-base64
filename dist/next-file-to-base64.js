@@ -9,33 +9,35 @@
     const reader = new FileReader();
     reader.readAsDataURL(inFile);
     return new Promise(function (resolve) {
-      reader.onload = function(inEvent) {
+      reader.onload = function (inEvent) {
         resolve(inEvent.target.result);
       };
     });
   };
 
 
-  nx.filesToBase64 = function(inFiles){
-    var list = nx.map(inFiles, function(_, file){
-      return function(next){
+  nx.filesToBase64 = function (inFiles) {
+    var list = nx.map(inFiles, function (_, file) {
+      return function (next) {
         nx.fileToBase64(file).then(function (inBase64) {
           next(inBase64);
         });
       };
     });
 
-    var queue = new NxQueue(list);
-
-    return new Promise(function(resolve){
-      queue.start().then(function (response) {
-        var status = response.status;
-        var data = response.data;
-        if (status === DONE) {
-          resolve(data);
-        }
+    if (list.length > 0) {
+      var queue = new NxQueue(list);
+      return new Promise(function (resolve) {
+        queue.start().then(function (response) {
+          var status = response.status;
+          var data = response.data;
+          if (status === DONE) {
+            resolve(data);
+          }
+        });
       });
-    })
+    }
+    return [];
   };
 
 
