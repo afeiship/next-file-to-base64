@@ -4,6 +4,7 @@
   var nx = global.nx || require('next-js-core2');
   var NxQueue = nx.Queue || require('next-queue');
   var DONE = 'done';
+  var ARRAY = [];
 
   nx.fileToBase64 = function (inFile) {
     const reader = new FileReader();
@@ -37,7 +38,11 @@
         });
       });
     }
-    return [];
+    return {
+      then: function(resolve){
+        resolve(ARRAY);
+      }
+    };
   };
 
 
