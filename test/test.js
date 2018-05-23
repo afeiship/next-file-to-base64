@@ -5,7 +5,7 @@ require('../src/next-file-to-base64');
 describe('next/fileToBase64', function () {
 
   it('nx.fileToBase64', function () {
-    var obj1 = {name: 'fei'};
+    var obj1 =  {name: 'fei'};
     var obj2 = {email: '1290657123@qq.com'};
 
     var result = {};
