@@ -17,7 +17,7 @@
 
 
   nx.filesToBase64 = function(inFiles){
-    var list = inFiles.map(function(file){
+    var list = nx.map(inFiles, function(_, file){
       return function(next){
         nx.fileToBase64(file).then(function (inBase64) {
           next(inBase64);
