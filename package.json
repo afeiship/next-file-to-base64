@@ -1,7 +1,7 @@
 {
   "name": "next-file-to-base64",
   "version": "1.0.0",
-  "description": "File to base64 based on FileReader for next",
+  "description": "File to base64 based on FileReader for next.",
   "homepage": "https://github.com/afeiship/next-file-to-base64",
   "author": {
     "name": "afei",

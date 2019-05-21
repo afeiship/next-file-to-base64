@@ -1,7 +1,7 @@
 {
   "name": "next-file-to-base64",
-  "version": "0.0.1",
-  "description": "File to base64 based on FileReader for next",
+  "version": "1.0.0",
+  "description": "File to base64 based on FileReader for next.",
   "main": "dist/next-file-to-base64.js",
   "authors": [
     "afei"

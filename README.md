@@ -1,5 +1,5 @@
 # next-file-to-base64
-> File to base64 based on FileReader for next
+> File to base64 based on FileReader for next.
 
 ## install:
 ```bash
