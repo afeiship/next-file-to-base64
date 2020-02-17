@@ -15,7 +15,7 @@
   };
 
   nx.fileToBase64 = function(inTarget) {
-    var files = Array.isArray(inTarget) ? inTarget : [inTarget];
+    var files = 'length' in inTarget ? nx.slice(inTarget) : [inTarget];
     return Promise.all(files.map(fileToProcess));
   };
 

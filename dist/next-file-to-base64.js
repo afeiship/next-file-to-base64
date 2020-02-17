@@ -2,8 +2,8 @@
  * name: @feizheng/next-file-to-base64
  * description: File to base64 based on FileReader for next.
  * url: https://github.com/afeiship/next-file-to-base64
- * version: 1.1.0
- * date: 2020-02-17 19:28:29
+ * version: 1.1.1
+ * date: 2020-02-17 19:33:27
  * license: MIT
  */
 
@@ -24,7 +24,7 @@
   };
 
   nx.fileToBase64 = function(inTarget) {
-    var files = Array.isArray(inTarget) ? inTarget : [inTarget];
+    var files = 'length' in inTarget ? nx.slice(inTarget) : [inTarget];
     return Promise.all(files.map(fileToProcess));
   };
 
