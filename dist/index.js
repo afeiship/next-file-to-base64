@@ -3,7 +3,7 @@
  * description: File to base64 based on FileReader for next.
  * homepage: https://github.com/afeiship/next-file-to-base64
  * version: 1.0.0
- * date: 2020-11-22 16:52:10
+ * date: 2020-11-22 16:52:45
  * license: MIT
  */
 
